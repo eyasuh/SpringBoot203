@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form page</title>
+</head>
+<body>
+    <form action = "#" th:action = "@{/informationForm}" th:object="${employee}" method ="post">
+        <label> First name:</label> <br>
+        <input type ="text" th:field="*{fname}" ><br>
+        <label for="lname" id="lname" name = "lname">Last name </label><br>
+        <input type ="text" th:field ="*{lname}"> <br>
+        <label>SSN</label><br>
+        <input type ="text" th:field ="*{ssn}"><br>
+        <label>DOB</label><br>
+        <input type="number" th:field="*{dob}">
+        <input type ="submit" value="Submit">
+
+
+    </form>
+
+
+</body>
+</html>
